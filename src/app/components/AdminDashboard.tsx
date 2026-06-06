@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { LogOut, Plus, Edit, Trash2, MessageSquare, LayoutDashboard, Leaf, X, Save, Eye, AlertTriangle } from "lucide-react";
+import { Plus, Edit, Trash2, MessageSquare, X, Save, Eye, AlertTriangle } from "lucide-react";
 import { useNavigate } from "react-router";
 import { plantsData, Plant } from "../data";
 import { ContactMessage, mockMessages } from "../data/messages";
+import { AdminSidebar } from "./admin/AdminSidebar";
 
 export function AdminDashboard() {
   const navigate = useNavigate();
@@ -62,56 +63,12 @@ export function AdminDashboard() {
 
   return (
     <div className="max-w-7xl mx-auto pb-8 flex flex-col md:flex-row gap-8">
-      {/* Sidebar */}
-      <aside className="w-full md:w-64 shrink-0 space-y-2">
-        <div className="bg-slate-900 text-white rounded-3xl p-6 mb-6">
-          <div className="flex items-center gap-3 mb-6 border-b border-slate-700 pb-6">
-            <div className="bg-emerald-500 p-2 rounded-xl">
-              <Leaf className="h-6 w-6 text-white" />
-            </div>
-            <div>
-              <h2 className="font-bold text-lg leading-tight">Panel Admin</h2>
-              <p className="text-slate-400 text-xs">Gestión del Huerto</p>
-            </div>
-          </div>
-          
-          <nav className="space-y-2">
-            <button 
-              onClick={() => setActiveTab('plants')}
-              className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-sm font-medium ${
-                activeTab === 'plants' ? 'bg-emerald-600 text-white' : 'text-slate-300 hover:bg-slate-800 hover:text-white'
-              }`}
-            >
-              <LayoutDashboard className="h-5 w-5" />
-              Inventario Plantas
-            </button>
-            <button 
-              onClick={() => setActiveTab('messages')}
-              className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-colors text-sm font-medium ${
-                activeTab === 'messages' ? 'bg-emerald-600 text-white' : 'text-slate-300 hover:bg-slate-800 hover:text-white'
-              }`}
-            >
-              <div className="flex items-center gap-3">
-                <MessageSquare className="h-5 w-5" />
-                Mensajes
-              </div>
-              {unreadMessagesCount > 0 && (
-                <span className="bg-rose-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
-                  {unreadMessagesCount}
-                </span>
-              )}
-            </button>
-          </nav>
-        </div>
-
-        <button 
-          onClick={handleLogout}
-          className="w-full flex items-center justify-center gap-2 bg-white text-rose-600 hover:bg-rose-50 border border-slate-200 px-4 py-3 rounded-2xl font-bold transition-colors shadow-sm"
-        >
-          <LogOut className="h-5 w-5" />
-          Cerrar Sesión
-        </button>
-      </aside>
+      <AdminSidebar
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+        unreadMessagesCount={unreadMessagesCount}
+        onLogout={handleLogout}
+      />
 
    
       <main className="flex-1 min-w-0">
