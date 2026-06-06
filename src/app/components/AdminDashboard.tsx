@@ -2,21 +2,7 @@ import { useState } from "react";
 import { LogOut, Plus, Edit, Trash2, MessageSquare, LayoutDashboard, Leaf, X, Save, Eye, AlertTriangle } from "lucide-react";
 import { useNavigate } from "react-router";
 import { plantsData, Plant } from "../data";
-
-interface ContactMessage {
-  id: string;
-  name: string;
-  email: string;
-  message: string;
-  date: string;
-  read: boolean;
-}
-
-const mockMessages: ContactMessage[] = [
-  { id: "1", name: "María González", email: "maria.g@ejemplo.com", message: "¿Tienen pensado plantar ruda en el huerto pronto?", date: "12 May 2026", read: false },
-  { id: "2", name: "Carlos Soto", email: "csoto@ejemplo.com", message: "Me gustaría participar como voluntario en el mantenimiento de las plantas.", date: "10 May 2026", read: true },
-  { id: "3", name: "Ana Silva", email: "ana.silva@ejemplo.com", message: "Excelente iniciativa, la manzanilla que saqué me sirvió mucho.", date: "08 May 2026", read: true }
-];
+import { ContactMessage, mockMessages } from "../data/messages";
 
 export function AdminDashboard() {
   const navigate = useNavigate();
