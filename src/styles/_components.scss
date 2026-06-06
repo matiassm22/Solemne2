@@ -1,0 +1,130 @@
+@import 'variables';
+@import 'mixins';
+
+.material-card {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid $color-borde;
+  @include card-shadow;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: $color-texto;
+
+  &__image-wrapper {
+    height: 12rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  &:hover &__image {
+    transform: scale(1.05);
+  }
+
+  &__badge {
+    position: absolute;
+    top: $espaciado-sm;
+    left: $espaciado-sm;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: $color-secundario;
+  }
+
+  &__content {
+    padding: $espaciado-md;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 $espaciado-xs 0;
+    color: $color-texto;
+  }
+
+  &__subtitle {
+    font-size: 0.875rem;
+    font-style: italic;
+    color: $color-texto-secundario;
+    margin: 0 0 $espaciado-sm 0;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: $espaciado-sm;
+    border-top: 1px solid $color-borde;
+    font-size: 0.875rem;
+
+    .stock {
+      font-weight: 600;
+    }
+    
+    .status {
+      &--critico { color: #ef4444; }
+      &--estable { color: #f59e0b; }
+      &--abundante { color: #10b981; }
+    }
+  }
+}
+
+.mensaje-alerta {
+  padding: $espaciado-md $espaciado-lg;
+  border-radius: $borde-radio-lg;
+  margin-bottom: $espaciado-lg;
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: flex-start;
+  gap: $espaciado-sm;
+  border-left: 4px solid transparent;
+
+  &__icono {
+    font-size: 1rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+  }
+
+  &--exito {
+    background-color: #ecfdf5;
+    color: #065f46;
+    border-left-color: #10b981;
+
+    .mensaje-alerta__icono {
+      background-color: #10b981;
+      color: $color-blanco;
+    }
+  }
+
+  &--error {
+    background-color: #fef2f2;
+    color: #991b1b;
+    border-left-color: #ef4444;
+
+    .mensaje-alerta__icono {
+      background-color: #ef4444;
+      color: $color-blanco;
+    }
+  }
+}
