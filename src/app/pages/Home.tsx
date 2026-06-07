@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router";
 import { Search, ArrowRight, Mail, BarChart3, AlertTriangle, Leaf } from "lucide-react";
 import { plantsData } from "../data";
-import { MaterialCard } from "./MaterialCard";
+import { MaterialCard } from "../components/MaterialCard";
 
 export function Home() {
   useEffect(() => {

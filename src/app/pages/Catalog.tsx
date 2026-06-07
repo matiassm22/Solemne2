@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import { Search, Filter } from "lucide-react";
 import { plantsData } from "../data";
-import { MaterialCard } from "./MaterialCard";
+import { MaterialCard } from "../components/MaterialCard";
 
 export function Catalog() {
   const [searchTerm, setSearchTerm] = useState("");

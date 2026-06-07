@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Send, Mail, User, MessageSquare, Tag } from "lucide-react";
-import { Mensaje } from "./Mensaje";
+import { Mensaje } from "../components/Mensaje";
 
 export function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });

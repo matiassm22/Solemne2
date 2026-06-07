@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router";
 import { Layout } from "./components/Layout";
-import { Home } from "./components/Home";
-import { Catalog } from "./components/Catalog";
-import { PlantDetail } from "./components/PlantDetail";
-import { Chatbot } from "./components/Chatbot";
-import { Contact } from "./components/Contact";
-import { Login } from "./components/Login";
-import { AdminDashboard } from "./components/AdminDashboard";
+import { Home } from "./pages/Home";
+import { Catalog } from "./pages/Catalog";
+import { PlantDetail } from "./pages/PlantDetail";
+import { Chatbot } from "./pages/Chatbot";
+import { Contact } from "./pages/Contact";
+import { Login } from "./pages/Login";
+import { AdminDashboard } from "./pages/AdminDashboard";
 
 export const router = createBrowserRouter([
   {
@@ -14,8 +14,8 @@ export const router = createBrowserRouter([
     Component: Layout,
     children: [
       { index: true, Component: Home },
-      { path: "catalogo", Component: Catalog },
-      { path: "planta/:id", Component: PlantDetail },
+      { path: "materiales", Component: Catalog },
+      { path: "materiales/:id", Component: PlantDetail },
       { path: "chatbot", Component: Chatbot },
       { path: "contacto", Component: Contact },
       { path: "login", Component: Login },
