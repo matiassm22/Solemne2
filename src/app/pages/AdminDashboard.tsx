@@ -73,7 +73,7 @@ export function AdminDashboard() {
       />
 
    
-      <main className="flex-1 min-w-0">
+      <section className="flex-1 min-w-0" aria-label="Panel administrativo">
         <div className="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
           
           {activeTab === 'plants' && (
@@ -93,7 +93,7 @@ export function AdminDashboard() {
           )}
 
         </div>
-      </main>
+      </section>
 
     
       {isModalOpen && (
