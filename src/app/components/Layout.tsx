@@ -8,7 +8,7 @@ export function Layout() {
 
   const links = [
     { label: "Inicio", path: "/" },
-    { label: "Catálogo", path: "/catalogo" },
+    { label: "Materiales", path: "/materiales" },
     { label: "Chatbot", path: "/chatbot" },
     { label: "Contacto", path: "/contacto" },
     { label: "Admin", path: "/login" },
