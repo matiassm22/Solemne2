@@ -81,7 +81,7 @@ export function Layout() {
           <div className="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
             <h3 className="font-bold text-slate-800 text-sm mb-3">Accesos rápidos</h3>
             <nav aria-label="Accesos rápidos" className="flex flex-col gap-1">
-              <Link to="/catalogo" className="flex items-center gap-2 text-xs text-slate-600 hover:text-emerald-700 hover:bg-emerald-50 px-3 py-2 rounded-lg transition-colors">
+              <Link to="/materiales" className="flex items-center gap-2 text-xs text-slate-600 hover:text-emerald-700 hover:bg-emerald-50 px-3 py-2 rounded-lg transition-colors">
                 <span className="text-emerald-500">🌿</span> Catálogo de plantas
               </Link>
               <Link to="/contacto" className="flex items-center gap-2 text-xs text-slate-600 hover:text-emerald-700 hover:bg-emerald-50 px-3 py-2 rounded-lg transition-colors">

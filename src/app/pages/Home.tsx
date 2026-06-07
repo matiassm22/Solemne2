@@ -36,7 +36,7 @@ export function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link 
-              to="/catalogo" 
+              to="/materiales"
               className="bg-white text-emerald-800 hover:bg-emerald-50 px-6 py-3 rounded-full font-bold shadow-lg transition-transform hover:-translate-y-1 flex items-center justify-center gap-2"
             >
               <Search className="h-5 w-5" />
@@ -90,7 +90,7 @@ export function Home() {
             <h2 className="text-3xl font-bold text-slate-800">Últimos Ingresos</h2>
             <p className="text-slate-500 mt-1">Materiales recientemente añadidos al inventario</p>
           </div>
-          <Link to="/catalogo" className="hidden sm:flex items-center text-emerald-600 font-medium hover:text-emerald-700">
+          <Link to="/materiales" className="hidden sm:flex items-center text-emerald-600 font-medium hover:text-emerald-700">
             Ver catálogo completo <ArrowRight className="ml-1 h-4 w-4" />
           </Link>
         </div>
@@ -99,7 +99,7 @@ export function Home() {
           {featuredPlants.map(plant => (
             <Link 
               key={plant.id} 
-              to={`/planta/${plant.id}`}
+              to={`/materiales/${plant.id}`}
               style={{ textDecoration: 'none', color: 'inherit' }}
             >
               <MaterialCard 
@@ -113,7 +113,7 @@ export function Home() {
           ))}
         </div>
         <div className="sm:hidden text-center mt-6">
-          <Link to="/catalogo" className="inline-flex items-center justify-center w-full bg-emerald-100 text-emerald-700 font-medium py-3 rounded-xl">
+          <Link to="/materiales" className="inline-flex items-center justify-center w-full bg-emerald-100 text-emerald-700 font-medium py-3 rounded-xl">
             Ver todo el catálogo
           </Link>
         </div>

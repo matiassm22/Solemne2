@@ -18,7 +18,7 @@ export function PlantDetail() {
     return (
       <div className="text-center py-20">
         <h2 className="text-2xl font-bold text-slate-800">Material no encontrado</h2>
-        <Link to="/catalogo" className="text-emerald-600 hover:underline mt-4 inline-block">
+        <Link to="/materiales" className="text-emerald-600 hover:underline mt-4 inline-block">
           Volver al catálogo
         </Link>
       </div>
@@ -27,7 +27,7 @@ export function PlantDetail() {
 
   return (
     <article className="max-w-4xl mx-auto space-y-6 animate-in fade-in duration-300">
-      <Link to="/catalogo" className="inline-flex items-center text-slate-500 hover:text-emerald-600 transition-colors mb-2 font-medium">
+      <Link to="/materiales" className="inline-flex items-center text-slate-500 hover:text-emerald-600 transition-colors mb-2 font-medium">
         <ArrowLeft className="h-4 w-4 mr-2" />
         Volver al catálogo
       </Link>
