@@ -69,7 +69,7 @@ export function Catalog() {
           {filteredPlants.map(plant => (
             <Link 
               key={plant.id} 
-              to={`/planta/${plant.id}`}
+              to={`/materiales/${plant.id}`}
               style={{ textDecoration: 'none', color: 'inherit' }}
             >
               <MaterialCard 
