@@ -46,21 +46,22 @@ npm run build
 
 ## Estructura del proyecto
 
-```
+```txt
 src/
 ├── app/
 │   ├── components/
+│   │   ├── Layout.tsx         # Layout global (header, nav, aside, footer)
+│   │   ├── MaterialCard.tsx   # Tarjeta reutilizable de material
+│   │   ├── MenuNav.tsx        # Barra de navegación reutilizable
+│   │   └── Mensaje.tsx        # Componente de alerta reutilizable
+│   ├── pages/
 │   │   ├── Home.tsx           # Página de inicio con métricas
 │   │   ├── Catalog.tsx        # Catálogo con búsqueda y filtros
 │   │   ├── PlantDetail.tsx    # Detalle de una planta
 │   │   ├── Contact.tsx        # Formulario de contacto
 │   │   ├── Login.tsx          # Acceso administrador
 │   │   ├── AdminDashboard.tsx # CRUD de materiales
-│   │   ├── Chatbot.tsx        # Asistente virtual
-│   │   ├── Layout.tsx         # Layout global (header, nav, aside, footer)
-│   │   ├── MaterialCard.tsx   # Tarjeta reutilizable de material
-│   │   ├── MenuNav.tsx        # Barra de navegación reutilizable
-│   │   └── Mensaje.tsx        # Componente de alerta reutilizable
+│   │   └── Chatbot.tsx        # Asistente virtual
 │   ├── data.ts                # Datos estáticos de plantas
 │   └── routes.tsx             # Configuración de React Router
 ├── styles/
@@ -82,8 +83,8 @@ src/
 | Ruta | Componente | Descripción |
 |---|---|---|
 | `/` | `Home` | Página de inicio con métricas generales |
-| `/catalogo` | `Catalog` | Listado de materiales con búsqueda y filtros |
-| `/planta/:id` | `PlantDetail` | Detalle de una planta específica |
+| `/materiales` | `Catalog` | Listado de materiales con búsqueda y filtros |
+| `/materiales/:id` | `PlantDetail` | Detalle de una planta específica |
 | `/contacto` | `Contact` | Formulario de contacto |
 | `/chatbot` | `Chatbot` | Asistente virtual del huerto |
 | `/login` | `Login` | Acceso al panel de administración |
@@ -140,3 +141,11 @@ Muestra alertas de confirmación o error al usuario.
 Usuario:    admin
 Contraseña: admin
 ```
+
+## Alcance de la entrega
+
+Esta versión corresponde a una interfaz frontend desarrollada como Single Page Application. Los datos utilizados son estáticos y se encuentran definidos dentro del propio proyecto, por lo que no existe conexión a una API externa ni a una base de datos real.
+
+El sistema permite visualizar información general del huerto medicinal, consultar el catálogo de plantas, revisar el detalle de cada especie, enviar mensajes mediante un formulario de contacto, utilizar un asistente virtual básico y acceder a un panel administrativo con operaciones CRUD simuladas sobre el inventario.
+
+La información sobre plantas medicinales tiene un propósito informativo y educativo. No reemplaza la evaluación ni las indicaciones de un profesional de salud.
