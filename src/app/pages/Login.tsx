@@ -32,7 +32,7 @@ export function Login() {
         {error && (
           <div className="bg-red-50 text-red-700 p-4 rounded-xl flex items-start gap-3 mb-6 border border-red-100">
             <ShieldAlert className="h-5 w-5 shrink-0 mt-0.5" />
-            <p className="text-sm font-medium">Credenciales incorrectas. Intenta usar "admin" / "admin".</p>
+            <p className="text-sm font-medium">Credenciales incorrectas.</p>
           </div>
         )}
 
